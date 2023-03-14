@@ -2,16 +2,22 @@
   "name": "v2k",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://michelelucini.github.io/v2k",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   },
   "eslintConfig": {
     "extends": [
