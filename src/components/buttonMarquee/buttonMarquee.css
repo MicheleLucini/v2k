@@ -1,0 +1,40 @@
+.marquee {
+  color: var(--accent);
+  background-color: var(--accent-lighten) !important;
+  width: 114px;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee:hover {
+  background-color: var(--accent) !important;
+}
+
+.marquee div {
+  display: block;
+  width: 200%;
+  padding-right: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  animation: marquee 2s linear infinite;
+}
+
+.marquee span {
+  /* font-size: 0.9rem;
+  letter-spacing: 0.05rem; */
+  /* width: calc(50% - 40px); */
+  float: left;
+  padding: 0 20px;
+}
+
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -100%;
+  }
+}

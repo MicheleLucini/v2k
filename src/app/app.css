@@ -1,0 +1,133 @@
+:root {
+  /* hsl(172, 40%, 21%, 100%);*/
+  --primary: #204B45;
+  --secondary: #90a4a1;
+  --lighten: #E7F6EF;
+  --accent: #E22B52;
+  --accent-lighten: #FCE4E9;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+button {
+  font-family: "Montserrat";
+}
+
+html {
+  box-sizing: border-box;
+  color: var(--secondary);
+  font-family: "Montserrat";
+  /**/
+  overflow-y: hidden;
+  width: calc(100% - 8px);
+  animation-name: scroll-again;
+  animation-duration: 1ms;
+  animation-delay: 2.15s;
+  animation-fill-mode: forwards;
+}
+
+h1 {
+  color: var(--primary);
+}
+
+@keyframes scroll-again {
+  0% {
+    overflow-y: hidden;
+    width: calc(100% - 8px);
+  }
+
+  100% {
+    overflow-y: scroll;
+    width: auto;
+  }
+}
+
+body {
+  min-height: 200vh;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--primary-lighten-100);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-lighten-200);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-lighten-300);
+}
+
+/***************************/
+
+#facade {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 250vw;
+  background-color: #fff;
+  display: grid;
+  align-items: flex-end;
+  animation-name: scroll-up;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+#facade>div {
+  width: 100%;
+  height: 50%;
+  background-color: var(--lighten);
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/***************************/
+
+.page {
+  display: grid;
+  gap: 200px;
+}
+
+.page>.section {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1300px;
+}
+
+/***************************/
