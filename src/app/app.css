@@ -34,11 +34,11 @@ html {
   font-family: "Montserrat";
   /**/
   overflow-y: hidden;
-  width: calc(100% - 8px);
   animation-name: scroll-again;
   animation-duration: 1ms;
-  animation-delay: 2.15s;
+  animation-delay: 1.65s;
   animation-fill-mode: forwards;
+  padding-right: 12px;
 }
 
 h1 {
@@ -48,12 +48,11 @@ h1 {
 @keyframes scroll-again {
   0% {
     overflow-y: hidden;
-    width: calc(100% - 8px);
   }
 
   100% {
     overflow-y: scroll;
-    width: auto;
+    padding-right: 0;
   }
 }
 
@@ -63,22 +62,22 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 12px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--primary-lighten-100);
+  background: var(--lighten);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-lighten-200);
+  background: var(--secondary);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-lighten-300);
+  background: var(--primary);
 }
 
 /***************************/
@@ -94,7 +93,7 @@ body {
   display: grid;
   align-items: flex-end;
   animation-name: scroll-up;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-delay: 0s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;

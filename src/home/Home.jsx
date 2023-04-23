@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 // import { useNavigator } from "../contexts/NavigatorContext";
 import ButtonDoubleText from '../components/buttonDoubleText/ButtonDoubleText';
 import Logo from '../assets/Logo.svg'
-import LogoIlly from '../assets/illy.png'
-import LogoHitaca from '../assets/hitaca.png'
+import ImgLogoIlly from '../assets/illy.png'
+import ImgLogoHitaca from '../assets/hitaca.png'
+import ImgFlessyL from '../assets/flessy_L_master.png'
+import ImgFlessyM from '../assets/flessy_M_master.png'
+import ImgFlessyXL from '../assets/flessy_XL_master.png'
+import ImgIntuity from '../assets/intuity_21.png'
+import { useOnScreen } from '../useOnScreen';
 import "./home.css";
 
 const Home = () => {
-  // const { navigate } = useNavigator();
+  const refSectionMotto = useRef();
+
+  const onScreenSectionMotto = useOnScreen(refSectionMotto, "-250px");
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [])
+
 
   return (
     <>
@@ -15,9 +27,9 @@ const Home = () => {
         <img src={Logo} alt="Logo Vending 2000" />
         <div>
           <span>L’eccellenza della pausa italiana<br />Concessionario ufficiale illy</span>
-          <img src={LogoIlly} alt="Logo illy" />
+          <img src={ImgLogoIlly} alt="Logo illy" />
           <div />
-          <img src={LogoHitaca} alt="Logo hitaca" />
+          <img src={ImgLogoHitaca} alt="Logo hitaca" />
         </div>
       </div>
 
@@ -25,11 +37,17 @@ const Home = () => {
 
       <div className="section home-section-first-media-card">
         <div className="wrapper">
-          <img src="./static/img/software-presenze-dipendenti-01.png" />
+          <img src={ImgFlessyXL} alt="Flessy XL master" />
+          <img src={ImgFlessyL} alt="Flessy L master" />
+          <img src={ImgFlessyM} alt="Flessy M master" />
+          <img src={ImgIntuity} alt="Intuity 21" />
         </div>
       </div>
 
-      <div className="section home-section-motto">
+      <div
+        ref={refSectionMotto}
+        className={"section home-section-motto " + (onScreenSectionMotto.wasIntersected ? "appear" : "")}
+      >
         <div>
           <p><span>VENDING 2000 SRL</span> offre solo prodotti di <span>qualità</span> per le</p>
         </div>
