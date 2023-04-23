@@ -1,14 +1,19 @@
 {
   "files": {
-    "main.css": "/v2k/static/css/main.a8a6510a.css",
-    "main.js": "/v2k/static/js/main.bac8a66f.js",
+    "main.css": "/v2k/static/css/main.7ee88e0c.css",
+    "main.js": "/v2k/static/js/main.471cc80b.js",
+    "static/media/catalog_sbf.png": "/v2k/static/media/catalog_sbf.7a6e2468b6d779a15178.png",
+    "static/media/flessy_XL_master.png": "/v2k/static/media/flessy_XL_master.c4551cda28a2497e1985.png",
+    "static/media/flessy_L_master.png": "/v2k/static/media/flessy_L_master.1cebe4f8c41208a9aa21.png",
+    "static/media/flessy_M_master.png": "/v2k/static/media/flessy_M_master.a05c0cbed69ac607bc25.png",
+    "static/media/intuity_21.png": "/v2k/static/media/intuity_21.2bea42959d1ea71adaee.png",
     "static/media/Logo.svg": "/v2k/static/media/Logo.f032fc70720bdeb52325c5627233345d.svg",
     "index.html": "/v2k/index.html",
-    "main.a8a6510a.css.map": "/v2k/static/css/main.a8a6510a.css.map",
-    "main.bac8a66f.js.map": "/v2k/static/js/main.bac8a66f.js.map"
+    "main.7ee88e0c.css.map": "/v2k/static/css/main.7ee88e0c.css.map",
+    "main.471cc80b.js.map": "/v2k/static/js/main.471cc80b.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8a6510a.css",
-    "static/js/main.bac8a66f.js"
+    "static/css/main.7ee88e0c.css",
+    "static/js/main.471cc80b.js"
   ]
 }
