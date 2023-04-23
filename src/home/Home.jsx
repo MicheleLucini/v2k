@@ -8,6 +8,7 @@ import ImgFlessyL from '../assets/flessy_L_master.png'
 import ImgFlessyM from '../assets/flessy_M_master.png'
 import ImgFlessyXL from '../assets/flessy_XL_master.png'
 import ImgIntuity from '../assets/intuity_21.png'
+import ImgCatalogSBF from '../assets/catalog_sbf.png'
 import { useOnScreen } from '../useOnScreen';
 import "./home.css";
 
@@ -19,7 +20,6 @@ const Home = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [])
-
 
   return (
     <>
@@ -65,46 +65,45 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="catalog">
-        <a className="rilora" href="#">
+      <div className="section home-section-catalog">
+        <a className='sbf' href="#">
           <div>
-            {/* <h2>Rilevazione oraria</h2>
+            <h2>Distributori per snacks<br />e bevande fredde</h2>
             <p>
-              In sede o fuori sede la rilevazione è facile, precisa e possibile da
-              ogni device.<br />Tieni sotto controllo le attività svolte misurando
-              come viene impiegato il tempo.
-            </p> */}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
             <ButtonDoubleText text="Scopri" />
+            <img src={ImgCatalogSBF} alt="Prodotti snack e bevande fredde" />
           </div>
         </a>
-        <a className="ricper" href="#">
+        <a className="bc" href="#">
           <div>
-            {/* <h2>Richieste e permessi</h2>
+            <h2>Distributori bevande calde</h2>
             <p>
-              Richieste di assenza ed approvazioni in pochi secondi, tutto nello
-              stesso posto.
-            </p> */}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
             <ButtonDoubleText text="Scopri" />
+            <img src={ImgCatalogSBF} alt="Prodotti bevande calde" />
           </div>
         </a>
-        <a className="rendi" href="#">
+        <a className="cc" href="#">
           <div>
-            {/* <h2>Rendicontazione</h2>
+            <h2>Macchine per caffe<br />in cialde ocs</h2>
             <p>
-              Ottieni dati certi e sicuri da inviare ai consulenti paghe e ai tuoi
-              clienti.
-            </p> */}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
             <ButtonDoubleText text="Scopri" />
+            <img src={ImgCatalogSBF} alt="Prodotti bevande calde" />
           </div>
         </a>
-        <a className="docum" href="#">
+        <a className="da" href="#">
           <div>
-            {/* <h2>Gestione documenti</h2>
+            <h2>Dispencer acqua</h2>
             <p>
-              I documenti importanti a portata di mano, basta ricerche in faldoni
-              impolverati.
-            </p> */}
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
             <ButtonDoubleText text="Scopri" />
+            <img src={ImgCatalogSBF} alt="Prodotti bevande calde" />
           </div>
         </a>
       </div>

@@ -55,11 +55,6 @@
 
 /***************************/
 
-.home-section-motto {
-  margin: 0 auto;
-  padding: 0 200px;
-}
-
 .home-section-motto>div {
   overflow: hidden;
 }
@@ -97,26 +92,24 @@
 
 /***************************/
 
-.catalog {
-  margin: 0 auto 160px;
-  padding: 0 200px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+.home-section-catalog {
+  display: grid !important;
+  grid-gap: 40px;
 }
 
-.catalog>a {
+.home-section-catalog>a {
   text-decoration: none;
 }
 
-.catalog>a>div {
+.home-section-catalog>a>div {
   padding: 40px;
-  height: 400px;
+  height: 500px;
   cursor: pointer;
+  position: relative;
 }
 
-.catalog>a>div,
-.catalog>a>div * {
+.home-section-catalog>a>div,
+.home-section-catalog>a>div * {
   will-change: transform;
   -webkit-transition: -webkit-transform 0.4s;
   transition: -webkit-transform 0.4s;
@@ -127,7 +120,7 @@
     -o-transform 0.4s;
 }
 
-.catalog>a:hover>div {
+.home-section-catalog>a:hover>div {
   -webkit-transform: scale(0.965);
   -moz-transform: scale(0.965);
   -ms-transform: scale(0.965);
@@ -135,7 +128,7 @@
   transform: scale(0.965);
 }
 
-.catalog>a:hover>div>* {
+.home-section-catalog>a:hover>div>* {
   -webkit-transform: scale(1.02);
   -moz-transform: scale(1.02);
   -ms-transform: scale(1.02);
@@ -143,42 +136,48 @@
   transform: scale(1.02);
 }
 
-.catalog>a>div>h2 {
-  font-size: 2rem;
-  font-weight: 500;
+.home-section-catalog>a>div>h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
   margin-bottom: 25px;
   color: var(--primary);
+  text-transform: uppercase;
 }
 
-.catalog>a>div>p {
+.home-section-catalog>a>div>p {
   font-size: 1.5rem;
   font-weight: 300;
   margin-bottom: 25px;
+  max-width: 55%;
   color: var(--primary);
 }
 
-.catalog .rilora,
-.catalog .docum {
-  grid-column: span 2;
+.home-section-catalog>a>div>img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  bottom: 0;
+  padding: 80px 40px 40px 0;
 }
 
-.catalog .rilora>div {
-  background-color: #fbfaf8;
+.home-section-catalog .sbf>div {
+  background-color: #FBFAF8;
 }
 
-.catalog .ricper>div {
-  background-color: #e6f7ef;
+.home-section-catalog .bc>div {
+  background-color: #E3F1F9;
 }
 
-.catalog .rendi>div {
-  background-color: #fbfbfb;
+.home-section-catalog .cc>div {
+  background-color: #F1F0FE;
 }
 
-.catalog .docum>div {
-  background-color: #f1f0fe;
+.home-section-catalog .da>div {
+  background-color: #E6F7EF;
 }
 
-.catalog>a>div>button {
+.home-section-catalog>a>div>button {
   overflow: hidden;
   outline: 0 !important;
   border: 3px solid var(--accent-lighten);
@@ -199,7 +198,7 @@
   background-color: transparent;
 }
 
-.catalog>a>div>button:hover {
+.home-section-catalog>a>div>button:hover {
   color: white;
   background-color: var(--accent);
   border-color: var(--accent);
