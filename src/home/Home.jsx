@@ -19,9 +19,11 @@ import "./home.css";
 const Home = () => {
   const refSectionMotto = useRef();
   const refSectionMotto2 = useRef();
+  const refSectionMotto3 = useRef();
 
   const onScreenSectionMotto = useOnScreen(refSectionMotto, "-150px");
   const onScreenSectionMotto2 = useOnScreen(refSectionMotto2, "-100px");
+  const onScreenSectionMotto3 = useOnScreen(refSectionMotto3, "-100px");
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -125,6 +127,29 @@ const Home = () => {
       <div
         ref={refSectionMotto2}
         className={"section home-section-motto " + (onScreenSectionMotto2.wasIntersected ? "appear" : "")}
+      >
+        <div>
+          <p><span>VENDING 2000 SRL</span> con sede a Pioltello MI, lavora per</p>
+        </div>
+        <div>
+          <p>offrirti i <span>migliori servizi e prodotti</span>.</p>
+        </div>
+      </div>
+
+      <div className="section home-section-map">
+        <iframe
+          title='Google Maps'
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.169481909016!2d9.319941076659434!3d45.48653173194786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c8564bd110a5%3A0xeba83fe4979d0346!2sVia%20Michelozzo%20da%20Forl%C3%AC%2C%208%2C%2020096%20Pioltello%20MI!5e0!3m2!1sit!2sit!4v1682352993179!5m2!1sit!2sit"
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy='no-referrer-when-downgrade'
+        >
+        </iframe>
+      </div>
+
+      <div
+        ref={refSectionMotto3}
+        className={"section home-section-motto " + (onScreenSectionMotto3.wasIntersected ? "appear" : "")}
       >
         <div>
           <p>Sin dal 2000, lavoriamo per creare <span>rapporti duraturi</span></p>

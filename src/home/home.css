@@ -280,6 +280,15 @@
 
 /***************************/
 
+.home-section-map>iframe {
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  height: 500px;
+}
+
+/***************************/
+
 .home-section-separator {
   width: 100%;
   height: 2px;
