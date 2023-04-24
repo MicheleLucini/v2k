@@ -9,6 +9,9 @@ import ImgFlessyM from '../assets/flessy_M_master.png'
 import ImgFlessyXL from '../assets/flessy_XL_master.png'
 import ImgIntuity from '../assets/intuity_21.png'
 import ImgCatalogSBF from '../assets/catalog_sbf.png'
+import ImgCatalogBC from '../assets/catalog_bc.png'
+import ImgCatalogCC from '../assets/catalog_cc.png'
+import ImgCatalogDA from '../assets/catalog_da.png'
 import ImgLogoML from '../assets/ml.png'
 import { useOnScreen } from '../useOnScreen';
 import "./home.css";
@@ -17,7 +20,7 @@ const Home = () => {
   const refSectionMotto = useRef();
   const refSectionMotto2 = useRef();
 
-  const onScreenSectionMotto = useOnScreen(refSectionMotto, "-100px");
+  const onScreenSectionMotto = useOnScreen(refSectionMotto, "-150px");
   const onScreenSectionMotto2 = useOnScreen(refSectionMotto2, "-100px");
 
   useEffect(() => {
@@ -70,43 +73,51 @@ const Home = () => {
 
       <div className="section home-section-catalog">
         <a className='sbf' href="#">
-          <div>
-            <h2>Distributori per snacks<br />e bevande fredde</h2>
+          <div className='container'>
+            <h2 className="title">Distributori per snacks<br />e bevande fredde</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
             <ButtonDoubleText text="Scopri" />
-            <img src={ImgCatalogSBF} alt="Prodotti snack e bevande fredde" />
+            <div className='image-wrapper'>
+              <img src={ImgCatalogSBF} alt="Prodotti snack e bevande fredde" />
+            </div>
           </div>
         </a>
         <a className="bc" href="#">
-          <div>
-            <h2>Distributori bevande calde</h2>
+          <div className='container'>
+            <h2 className="title">Distributori bevande calde</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
             <ButtonDoubleText text="Scopri" />
-            <img src={ImgCatalogSBF} alt="Prodotti bevande calde" />
+            <div className='image-wrapper'>
+              <img src={ImgCatalogBC} alt="Prodotti bevande calde" />
+            </div>
           </div>
         </a>
         <a className="cc" href="#">
-          <div>
-            <h2>Macchine per caffe<br />in cialde ocs</h2>
+          <div className='container'>
+            <h2 className="title">Macchine per caffè<br />in cialde ocs</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
             <ButtonDoubleText text="Scopri" />
-            <img src={ImgCatalogSBF} alt="Prodotti bevande calde" />
+            <div className='image-wrapper'>
+              <img src={ImgCatalogCC} alt="Prodotti macchine per caffè" />
+            </div>
           </div>
         </a>
         <a className="da" href="#">
-          <div>
-            <h2>Dispencer acqua</h2>
+          <div className='container'>
+            <h2 className="title">Dispenser acqua</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
             <ButtonDoubleText text="Scopri" />
-            <img src={ImgCatalogSBF} alt="Prodotti bevande calde" />
+            <div className='image-wrapper'>
+              <img src={ImgCatalogDA} alt="Prodotti dispenser acqua" />
+            </div>
           </div>
         </a>
       </div>
