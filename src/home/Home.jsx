@@ -14,8 +14,10 @@ import "./home.css";
 
 const Home = () => {
   const refSectionMotto = useRef();
+  const refSectionMotto2 = useRef();
 
-  const onScreenSectionMotto = useOnScreen(refSectionMotto, "-250px");
+  const onScreenSectionMotto = useOnScreen(refSectionMotto, "-100px");
+  const onScreenSectionMotto2 = useOnScreen(refSectionMotto2, "-100px");
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -106,6 +108,30 @@ const Home = () => {
             <img src={ImgCatalogSBF} alt="Prodotti bevande calde" />
           </div>
         </a>
+      </div>
+
+      <div
+        ref={refSectionMotto2}
+        className={"section home-section-motto " + (onScreenSectionMotto2.wasIntersected ? "appear" : "")}
+      >
+        <div>
+          <p>Sin dal 2000, lavoriamo per creare <span>rapporti duraturi</span></p>
+        </div>
+        <div>
+          <p>coi nostri clienti e garantire <span>prezzi ragionevoli</span> e</p>
+        </div>
+        <div>
+          <p>materiali di qualità elevata consegnati senza</p>
+        </div>
+        <div>
+          <p>inconvenienti.</p>
+        </div>
+      </div>
+
+      <div className="section home-section-motto appear">
+        <div>
+          <p>Verifica la disponibilità dei nostri prodotti e le loro specifiche nella <a>pagina prodotti</a>.</p>
+        </div>
       </div>
 
       <div className="footer">
