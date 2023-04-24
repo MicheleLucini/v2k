@@ -1,11 +1,11 @@
 .home-section-logo {
-  margin-top: 250px;
+  margin-top: 200px;
 }
 
 .home-section-logo>img {
   margin: auto;
   display: block;
-  width: 35vw;
+  width: 400px;
 }
 
 .home-section-logo>div {
@@ -290,16 +290,10 @@ button:hover {
 
 /***************************/
 
-.footer {
-  background-color: #eceff1;
-  height: 45vh;
+.home-section-separator {
   width: 100%;
-  display: grid;
-  place-items: center;
-}
-
-.footer>.logo {
-  height: 56px;
+  height: 2px;
+  background-color: var(--lighten);
 }
 
 /**********************************/
