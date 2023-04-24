@@ -24,42 +24,6 @@
   user-select: none;
 }
 
-button {
-  font-family: "Montserrat";
-}
-
-html {
-  box-sizing: border-box;
-  color: var(--secondary);
-  font-family: "Montserrat";
-  /**/
-  overflow-y: hidden;
-  animation-name: scroll-again;
-  animation-duration: 1ms;
-  animation-delay: 1.65s;
-  animation-fill-mode: forwards;
-  padding-right: 12px;
-}
-
-h1 {
-  color: var(--primary);
-}
-
-@keyframes scroll-again {
-  0% {
-    overflow-y: hidden;
-  }
-
-  100% {
-    overflow-y: scroll;
-    padding-right: 0;
-  }
-}
-
-body {
-  min-height: 200vh;
-}
-
 /* width */
 ::-webkit-scrollbar {
   width: 12px;
@@ -80,46 +44,48 @@ body {
   background: var(--primary);
 }
 
-/***************************/
-
-#facade {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 250vw;
-  background-color: #fff;
-  display: grid;
-  align-items: flex-end;
-  animation-name: scroll-up;
-  animation-duration: 1.5s;
-  animation-delay: 0s;
-  animation-timing-function: linear;
+html {
+  box-sizing: border-box;
+  color: var(--secondary);
+  font-family: "Montserrat";
+  /**/
+  opacity: 0;
+  transform: translateY(5px);
+  animation-name: fake-load;
+  animation-duration: 300ms;
+  animation-delay: 100ms;
   animation-fill-mode: forwards;
 }
 
-#facade>div {
-  width: 100%;
-  height: 50%;
-  background-color: var(--lighten);
-}
-
-@keyframes scroll-up {
+@keyframes fake-load {
   0% {
-    transform: translateY(0%);
+    opacity: 0;
+    transform: translateY(5px);
   }
 
   100% {
-    transform: translateY(-100%);
+    opacity: 1;
+    transform: translateY(0px);
   }
+}
+
+body {
+  min-height: 200vh;
+}
+
+h1 {
+  color: var(--primary);
+}
+
+button {
+  font-family: "Montserrat";
 }
 
 /***************************/
 
 .page {
   display: grid;
-  gap: 200px;
+  gap: 130px;
 }
 
 .page>.section {
@@ -139,7 +105,10 @@ body {
   grid-template-columns: 1fr auto auto;
   align-items: baseline;
   gap: 10px;
-  padding: 25px 0;
+  padding: 80px 35px 20px;
+  /* background-color: #e7eef6; */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .footer span {

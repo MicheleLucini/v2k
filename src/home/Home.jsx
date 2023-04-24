@@ -12,7 +12,6 @@ import ImgCatalogSBF from '../assets/catalog_sbf.png'
 import ImgCatalogBC from '../assets/catalog_bc.png'
 import ImgCatalogCC from '../assets/catalog_cc.png'
 import ImgCatalogDA from '../assets/catalog_da.png'
-import ImgLogoML from '../assets/ml.png'
 import { useOnScreen } from '../useOnScreen';
 import "./home.css";
 
@@ -189,12 +188,6 @@ const Home = () => {
         <div>
           <p><span>Cell. 3488402244</span></p>
         </div>
-      </div>
-
-      <div className="footer">
-        <span>© 2000 - 2023 Vending 2000 S.R.L.</span>
-        <span>Design & Development</span>
-        <img src={ImgLogoML} alt="Logo Michele Lucini" />
       </div>
     </>
   );

@@ -1,5 +1,5 @@
-import React from "react";
-import ButtonDoubleText from '../components/buttonDoubleText/ButtonDoubleText';
+import React, { useState, useCallback } from "react";
+// import ButtonDoubleText from '../components/buttonDoubleText/ButtonDoubleText';
 import ButtonMarquee from '../components/buttonMarquee/ButtonMarquee';
 import Logo from '../assets/Logo.svg'
 // import { useSelector } from 'react-redux';
@@ -12,22 +12,31 @@ import Logo from '../assets/Logo.svg'
 import "./appTopBar.css";
 
 const AppTopBar = () => {
-  // const { checkCurrentRoute } = useNavigator();
+  const [menuOpen, setMenuOpen] = useState(null);
+
+  // const { checkCurrentRoute } = useNavigator();  
+
+  const onMenuButtonClick = useCallback(() => {
+    setMenuOpen((prev) => !prev)
+  }, []);
+
 
   return (
     <>
-      <div className="menu-btn-wrapper">
-        <button id="btnMenu" className="menu-btn hover-grow close">
-          <div className="line uno"></div>
-          <div className="line due"></div>
-        </button>
-      </div>
-
       <div className="header">
         <img src={Logo} alt="Logo" />
         {/* <ButtonDoubleText text="Prezzi" /> */}
         <ButtonMarquee text="Contattaci" />
-        <div></div>
+        {/* <div></div> */}
+        <div className="menu-btn-wrapper">
+          <button
+            className={"menu-btn hover-grow " + (menuOpen === true ? "open" : "") + (menuOpen === false ? "close" : "")}
+            onClick={onMenuButtonClick}
+          >
+            <div className="line uno"></div>
+            <div className="line due"></div>
+          </button>
+        </div>
       </div>
     </>
   );
