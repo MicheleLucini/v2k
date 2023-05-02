@@ -73,6 +73,11 @@ body {
   min-height: 200vh;
 }
 
+body.menu-open {
+  overflow: hidden;
+  padding-right: 12px;
+}
+
 h1 {
   color: var(--primary);
 }
@@ -85,7 +90,7 @@ button {
 
 .page {
   display: grid;
-  gap: 130px;
+  gap: 100px;
 }
 
 .page>.section {
