@@ -4,14 +4,17 @@ import ButtonDoubleText from '../components/buttonDoubleText/ButtonDoubleText';
 import Logo from '../assets/Logo.svg'
 import ImgLogoIlly from '../assets/illy.png'
 import ImgLogoHitaca from '../assets/hitaca.png'
-import ImgFlessyL from '../assets/flessy_L_master.png'
-import ImgFlessyM from '../assets/flessy_M_master.png'
-import ImgFlessyXL from '../assets/flessy_XL_master.png'
-import ImgIntuity from '../assets/intuity_21.png'
+// import ImgFlessyL from '../assets/flessy_L_master.png'
+// import ImgFlessyM from '../assets/flessy_M_master.png'
+// import ImgFlessyXL from '../assets/flessy_XL_master.png'
+// import ImgIntuity from '../assets/intuity_21.png'
 import ImgCatalogSBF from '../assets/catalog_sbf.png'
 import ImgCatalogBC from '../assets/catalog_bc.png'
 import ImgCatalogCC from '../assets/catalog_cc.png'
 import ImgCatalogDA from '../assets/catalog_da.png'
+import ImgInstalled1 from '../assets/img_1.jpeg'
+import ImgInstalled2 from '../assets/img_2.jpeg'
+import ImgInstalled3 from '../assets/img_3.jpeg'
 import { useOnScreen } from '../useOnScreen';
 import "./home.css";
 
@@ -20,7 +23,7 @@ const Home = () => {
   const refSectionMotto2 = useRef();
   const refSectionMotto3 = useRef();
 
-  const onScreenSectionMotto = useOnScreen(refSectionMotto, "-150px");
+  const onScreenSectionMotto = useOnScreen(refSectionMotto, "-100px");
   const onScreenSectionMotto2 = useOnScreen(refSectionMotto2, "-100px");
   const onScreenSectionMotto3 = useOnScreen(refSectionMotto3, "-100px");
 
@@ -42,14 +45,14 @@ const Home = () => {
 
       <h1 className='section home-section-title'>Gestione Distributori<br />Automatici</h1>
 
-      <div className="section home-section-first-media-card">
+      {/* <div className="section home-section-first-media-card">
         <div className="wrapper">
           <img src={ImgFlessyXL} alt="Flessy XL master" />
           <img src={ImgFlessyL} alt="Flessy L master" />
           <img src={ImgFlessyM} alt="Flessy M master" />
           <img src={ImgIntuity} alt="Intuity 21" />
         </div>
-      </div>
+      </div> */}
 
       <div
         ref={refSectionMotto}
@@ -161,6 +164,14 @@ const Home = () => {
         </div>
         <div>
           <p>inconvenienti.</p>
+        </div>
+      </div>
+
+      <div className="section home-section-installed">
+        <div>
+          <img src={ImgInstalled1} alt="Prodotto installato 1" />
+          <img src={ImgInstalled2} alt="Prodotto installato 2" />
+          <img src={ImgInstalled3} alt="Prodotto installato 3" />
         </div>
       </div>
 

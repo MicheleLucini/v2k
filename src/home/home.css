@@ -295,6 +295,31 @@
   background-color: var(--lighten);
 }
 
+/***************************/
+
+.home-section-installed>div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8vw;
+  padding-bottom: 200px;
+}
+
+.home-section-installed>div>img {
+  width: 100%;
+}
+
+.home-section-installed>div>img:nth-child(1) {
+  grid-row: 1/5;
+}
+
+.home-section-installed>div>img:nth-child(2) {
+  grid-row: 4/8;
+}
+
+.home-section-installed>div>img:nth-child(3) {
+  grid-row: 7/11;
+}
+
 /**********************************/
 
 /* The core button */
