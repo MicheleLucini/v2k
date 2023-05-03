@@ -248,7 +248,8 @@
 }
 
 .menu>.menu-box>a {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
   color: var(--primary);
   font-weight: 500;
   cursor: pointer;
