@@ -1,6 +1,6 @@
-/* .home-section-logo {
-  margin-top: 200px;
-} */
+.home-section-logo {
+  margin-top: -100px;
+}
 
 .home-section-logo>img {
   margin: auto;
